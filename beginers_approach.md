@@ -327,9 +327,9 @@ Arduino D3 (TX) → HC‑05 RX (via divider 2k:1k)
 
 ```mermaid
 flowchart LR
-  APP[Phone App] == BT SPP ==> HC05[HC‑05]
+  APP[Phone App] == BT SPP ==> HC05[HC-05]
   HC05 == UART ==> MCU[Arduino]
-  MCU == PWM/INx ==> L298N
+  MCU == PWM & DIR ==> L298N
   L298N == Power ==> MOTORS
   BATTERY --> L298N
   BATTERY -->|5V buck| MCU
@@ -339,19 +339,22 @@ flowchart LR
 sequenceDiagram
   participant User
   participant App
-  participant HC05 as HC‑05
+  participant HC05 as HC-05
   participant AVR as Arduino
   participant Driver as L298N
   participant M1 as Motor L
   participant M2 as Motor R
 
-  User->>App: Tap Forward @180
-  App->>HC05: "F180\n" (Bluetooth SPP)
+  User->>App: Tap Forward at 180
+  App->>HC05: Send F180
   HC05->>AVR: UART bytes
-  AVR->>Driver: IN1=1,IN2=0; ENA=PWM(180)
-  AVR->>Driver: IN3=1,IN4=0; ENB=PWM(180)
-  Driver->>M1: Current flows + PWM
-  Driver->>M2: Current flows + PWM
+  AVR->>Driver: Set left forward
+  AVR->>Driver: Set right forward
+  AVR->>Driver: ENA PWM 180
+  AVR->>Driver: ENB PWM 180
+  Driver->>M1: Drive motor
+  Driver->>M2: Drive motor
+
 ```
 
 ---
