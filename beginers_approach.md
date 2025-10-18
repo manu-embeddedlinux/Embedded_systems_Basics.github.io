@@ -337,6 +337,7 @@ flowchart LR
 
 ```mermaid
 sequenceDiagram
+  autonumber
   participant User
   participant App
   participant HC05 as HC-05
@@ -345,15 +346,30 @@ sequenceDiagram
   participant M1 as Motor L
   participant M2 as Motor R
 
-  User->>App: Tap Forward at 180
-  App->>HC05: Send F180
-  HC05->>AVR: UART bytes
-  AVR->>Driver: Set left forward
-  AVR->>Driver: Set right forward
-  AVR->>Driver: ENA PWM 180
-  AVR->>Driver: ENB PWM 180
-  Driver->>M1: Drive motor
-  Driver->>M2: Drive motor
+  User->>App: Tap Forward @180
+  App->>HC05: Send "F180"
+  HC05->>AVR: UART bytes (9600 baud)
+  Note over HC05,AVR: TX->RX, RX->TX, common GND
+
+  activate AVR
+  AVR->>Driver: IN1=HIGH, IN2=LOW  (Left fwd)
+  AVR->>Driver: IN3=HIGH, IN4=LOW  (Right fwd)
+  AVR->>Driver: ENA = PWM(180)
+  AVR->>Driver: ENB = PWM(180)
+  deactivate AVR
+
+  activate Driver
+  Driver->>M1: Drive @ PWM 180
+  Driver->>M2: Drive @ PWM 180
+  deactivate Driver
+
+  alt Stop command
+    App->>HC05: "S"
+    HC05->>AVR: UART "S"
+    AVR->>Driver: ENA=0, ENB=0 (brake)
+  end
+
+  Note over AVR,Driver: Common GND is mandatory
 
 ```
 
