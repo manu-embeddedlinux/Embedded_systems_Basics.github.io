@@ -1,7 +1,11 @@
 ---
 
-title: Beginner Approach — Fun-First RC Robot
-subtitle: Start with a remote-controlled robot and (accidentally) learn embedded systems
+---
+title: "Beginner Approach — Fun-First RC Robot"
+description: "Start with a remote-controlled robot and learn embedded systems basics — PWM, UART, Bluetooth, and motor control — the fun way!"
+layout: default
+---
+
 ----------------------------------------------------------------------------------------
 
 # Beginner Approach (Fun‑First): Build a Remote‑Controlled Robot 🛠️🤖
