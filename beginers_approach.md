@@ -289,8 +289,6 @@ Stretch: add wheel **encoders** later for closed‑loop speed control (PID). For
 * **Power integrity** (decoupling, grounding, brownouts)
 * **Embedded C** coding patterns (command parser, mapping inputs→actuators)
 
-> See? Pizza with broccoli. You barely noticed.
-
 ---
 
 ## Stretch Goals (Weekend Boss Mode)
@@ -358,24 +356,8 @@ sequenceDiagram
 
 ---
 
-## Images (placeholders + generator prompts)
-
-* **Wiring overview photo:** take a clean top‑down shot. Add labels.
-* **Chassis glamour shot:** outdoor light = instant pro.
-
-**AI prompt for a clean illustration:**
-
-> “Top‑down vector illustration of a 2‑wheel Arduino robot with L298N driver and HC‑05 Bluetooth, labeled connections (ENA/ENB, IN1..IN4, RX/TX), minimal dark theme, neon accents, flat‑tech style, high resolution.”
-
-**AI prompt for a playful poster:**
-
-> “Cute RC robot poster, bright colors, fun typography, ‘Controlled Chaos: Learn PWM, UART & Bluetooth by driving a robot’, clean layout, high contrast, minimal text.”
 
 ---
-
-## Downloadables (to add later)
-
-* STL files for mounts, a printable wiring card, and a one‑page cheat sheet.
 
 ---
 
