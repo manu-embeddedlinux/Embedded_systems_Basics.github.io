@@ -129,7 +129,7 @@ Ship fast, learn along the way. Each project has scoped features, tests, and a s
 3) **Linux Edge Node**  
    - Char driver + userspace client + REST/CLI tool
 
-**Cadence:** 2–3 weeks per project with strict scope → portfolio-ready repos.
+2–3 weeks per project with strict scope → portfolio-ready repos.
 
 ---
 
@@ -208,4 +208,3 @@ Each project page should include:
 
 ---
 
-## 📂 Suggested Repo Structure
