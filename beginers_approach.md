@@ -12,7 +12,7 @@ layout: default
 
 *Goal:* Make something that moves, blinks, and obeys you — while quietly learning motors, PWM, UART/Bluetooth, and microcontroller basics.
 
-> Promise: zero interview stress, maximum tinkering joy. You’ll still learn real skills used in embedded jobs — we just hide the broccoli in the pizza.
+> Promise: zero interview stress, maximum tinkering joy. You’ll still learn real skills used in embedded jobs.
 
 ---
 
