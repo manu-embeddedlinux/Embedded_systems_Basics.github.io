@@ -1,8 +1,8 @@
 ---
 
 ---
-title: "Beginner Approach — Fun-First RC Robot"
-description: "Start with a remote-controlled robot and learn embedded systems basics — PWM, UART, Bluetooth, and motor control — the fun way!"
+"Beginner Approach — Fun-First RC Robot"
+"Start with a remote-controlled robot and learn embedded systems basics — PWM, UART, Bluetooth, and motor control — the fun way!"
 layout: default
 ---
 
